@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>SolusiTech</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">Jasa Pembuatan Website Murah, Profesional, dan Cepat</span>
+                <span class="site-heading-lower">Solusi Tech</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4 sticky-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto" id="navbarNav">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#home">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#about">About</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#portofolio">Portofolio</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#harga">Harga</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#store">Store</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navLinks = document.querySelectorAll('.navbar-nav .nav-item a'); // Ambil semua link navbar
+                const sections = document.querySelectorAll("section"); // Ambil semua section
+        
+                // Fungsi untuk setel link aktif
+                function setActiveLink() {
+                    let currentSection = "";
+        
+                    // Iterasi setiap section dan cek apakah section tersebut aktif
+                    sections.forEach((section) => {
+                        const rect = section.getBoundingClientRect(); // Mendapatkan posisi section
+                        const sectionTop = rect.top;
+                        const sectionBottom = rect.bottom;
+                        const windowHeight = window.innerHeight;
+        
+                        // Memastikan section masih terlihat di layar
+                        if (sectionTop <= windowHeight / 2 && sectionBottom > windowHeight / 2) {
+                            currentSection = section.getAttribute("id"); // Ambil ID section yang aktif
+                        }
+                    });
+        
+                    // Setiap link di navbar, jika sesuai dengan section aktif, beri kelas 'active'
+                    navLinks.forEach((link) => {
+                        const parent = link.parentElement; // Ambil elemen li dari link navbar
+                        const targetId = link.getAttribute("href").substring(1); // Ambil target id dari href
+        
+                        if (targetId === currentSection) {
+                            parent.classList.add("active"); // Tambahkan kelas active
+                        } else {
+                            parent.classList.remove("active"); // Hapus kelas active
+                        }
+                    });
+                }
+        
+                // Panggil setActiveLink setiap kali halaman di-scroll
+                window.addEventListener("scroll", setActiveLink);
+        
+                // Set active link saat halaman pertama kali dimuat
+                setActiveLink();
+            });
+        </script>
+                 
+        <section id="home" class="page-section clearfix">
+            <div class="container">
+                <div class="intro">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="..." />
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Segar Idemu</span>
+                            <span class="section-heading-lower">Mantap Solusinya</span>
+                        </h2>
+                        <p class="mb-3">Partner dan layanan teknologi informasi terbaik, partner profesional untuk transformasi bisnis dengan teknologi.</p>
+                        <div class="text-center mt-4">
+                            <a href="store.html" class="btn btn-primary btn-lg px-4 py-3 fw-semibold">
+                                Dapatkan website dan gratis domain.com sekarang juga!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="home" class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">Our Promise</span>
+                                <span class="section-heading-lower">To You</span>
+                            </h2>
+                            <p class="mb-0">Mengedepankan kulitas layanan dengan harga terjangkau sebagai inti layanan Kami. Dengan fokus pada kebutuhan klien, Kami menawarkan solusi pengembangan web yang unik dan sesuai dengan visi bisnis masing-masing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-section about-heading">
+            <div class="container">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/about.jpg" alt="..." />
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">Strong Idea, Strong Solution</span>
+                                    <span class="section-heading-lower">About Solusi Tech</span>
+                                </h2>
+                                <p>SolusiTech adalah perusahaan IT/ Software House/ Developer berpusat di Kota Malang. SolusiTech awal berdiri tahun 2018 dan pada tahun 2021 berdiri PT. Solusi Teknologi Pertama sebagai naungan legalitas SolusiTech untuk memberikan rasa aman dan kepercayaan pelanggan. SolusiTech berfokus pada Layanan <strong>Jasa Pembuatan Aplikasi Web</strong> dan <strong>Jasa Pembuatan Website</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portofolio" class="page-section">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper">Jasa Pembuatan</span>
+                                <span class="section-heading-lower">Website Sayuran</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/products-01.jpg" alt="..." />
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-0">Kami melayani pembuatan website untuk bisnis sayuran yang ingin tampil profesional dan dipercaya pelanggan. Website dilengkapi fitur katalog produk, pemesanan online, informasi harga harian, galeri foto produk segar, dan kontak langsung via WhatsApp. Cocok untuk petani, distributor, maupun toko sayur yang ingin memperluas pasar secara digital.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portofolio" class="page-section">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex me-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper">Jasa Pembuatan</span>
+                                <span class="section-heading-lower">Website Toko Roti</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/products-02.jpg" alt="..." />
+                    <div class="product-item-description d-flex ms-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-0">Kami menyediakan layanan pembuatan website khusus untuk toko roti yang ingin tampil profesional secara online. Website dirancang menarik dan responsif, lengkap dengan fitur katalog produk, pemesanan online, galeri foto, dan integrasi WhatsApp. Solusi ideal untuk meningkatkan penjualan dan memperluas jangkauan pelanggan.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portofolio" class="page-section">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper">Jasa Pembuatan</span>
+                                <span class="section-heading-lower">Website Toko Pakaian</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/products-03.jpg" alt="..." />
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-0"> Kami menyediakan jasa pembuatan website profesional untuk toko pakaian, butik, atau brand fashion lokal. Website dapat dilengkapi fitur katalog produk, galeri koleksi, sistem pemesanan, integrasi pembayaran, dan koneksi ke media sosial. Cocok untuk meningkatkan penjualan online dan memperkuat identitas brand Anda di dunia digital.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paket Layanan -->
+        <section id="harga" class="page-section cta">
+            <div class="container">
+                <div class="text-center mb-5">
+                <h2 class="section-heading mb-5">
+                    <span class="section-heading-upper">Pilih solusi terbaik untuk bisnis Anda</span>
+                    <span class="section-heading-lower small-heading">Paket Website</span>
+                </h2>
+                </div>
+                <div class="row">
+                    <!-- Paket Starter -->
+                    <div class="col-md-4 mb-5">
+                        <div class="card h-100 text-center border-0 shadow-lg rounded" style="background-color: #ffffff; padding: 20px;">
+                            <div class="card-body">
+                                <h4 class="card-title" style="color: #e67e22;">Basic</h4>
+                                <!-- Menambahkan kotak atau elips dengan warna kontras di sekitar harga -->
+                                <div class="price-box" style="background-color: #e67e22; color: white; padding: 10px 20px; border-radius: 50px; display: inline-block; font-size: 1.5rem;">
+                                    <span>Rp 850.000</span>
+                                </div>
+                                <!-- Menambahkan tulisan di bawah harga -->
+                                <p class="mt-3" style="color: #7f8c8d;">Landing Page, Portfolio, Tugas Sekolah</p>
+                                
+                                <p class="card-text">
+                                    <ul class="list-unstyled">
+                                        <li>✔ Custom Design</li>
+                                        <li>✔ Gratis Domain!</li>
+                                        <li>✔ Gratis Hosting!</li>
+                                        <li>✔ Support</li>
+                                    </ul>
+                                </p>
+                                <a href="store.html" class="btn btn-outline-warning mt-3" style="border-radius: 30px; padding: 0.75rem 2rem;">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Paket Profesional -->
+                    <div class="col-md-4 mb-5">
+                        <div class="card h-100 text-center border-0 shadow-lg rounded" style="background-color: #ffffff; padding: 20px;">
+                            <div class="card-body">
+                                <h4 class="card-title" style="color: #e67e22;">
+                                    Premium 
+                                    <!-- Menambahkan ikon Best Seller -->
+                                    <i class="fas fa-star" style="color: gold; margin-left: 5px;"></i>
+                                </h4>
+                                <!-- Menambahkan kotak atau elips dengan warna kontras di sekitar harga -->
+                                <div class="price-box" style="background-color: #e67e22; color: white; padding: 10px 20px; border-radius: 50px; display: inline-block; font-size: 1.5rem;">
+                                    <span>Rp 2.500.000</span>
+                                </div>
+                                <!-- Menambahkan tulisan di bawah harga -->
+                                <p class="mt-3" style="color: #7f8c8d;">Tour & Travel, Sekolah, Company Profile, Toko Online, Replika, Web Support</p>                              
+                                <p class="card-text">
+                                    <ul class="list-unstyled">
+                                        <li>✔ Custom Design</li>
+                                        <li>✔ Email Business!</li>
+                                        <li>✔ Gratis Domain!</li>
+                                        <li>✔ Gratis Hosting!</li>
+                                        <li>✔ Maintenance & Support</li>
+                                    </ul>
+                                </p>
+                                <a href="store.html" class="btn btn-outline-warning mt-3" style="border-radius: 30px; padding: 0.75rem 2rem;">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Paket Premium -->
+                    <div class="col-md-4 mb-5">
+                        <div class="card h-100 text-center border-0 shadow-lg rounded" style="background-color: #ffffff; padding: 20px;">
+                            <div class="card-body">
+                                <h4 class="card-title" style="color: #e67e22;">Business</h4>
+                                <!-- Menambahkan kotak atau elips dengan warna kontras di sekitar harga -->
+                                <div class="price-box" style="background-color: #e67e22; color: white; padding: 10px 20px; border-radius: 50px; display: inline-block; font-size: 1.5rem;">
+                                    <span>Rp 5.500.000</span>
+                                </div>
+                                <!-- Menambahkan tulisan di bawah harga -->
+                                <p class="mt-3" style="color: #7f8c8d;">ERP, CRM, Afiliasi, Reseller, Distributor, Multi Level</p>
+                                
+                                <p class="card-text">
+                                    <ul class="list-unstyled">
+                                        <li>✔ Custom Pro Design</li>
+                                        <li>✔ Full Custom System</li>
+                                        <li>✔ Notifikasi!</li>
+                                        <li>✔ Email Business!</li>
+                                        <li>✔ Payment Gateway!</li>
+                                        <li>✔ Gratis Domain!</li>
+                                        <li>✔ Gratis Hosting!</li>
+                                        <li>✔ Maintenance & Support</li>
+                                    </ul>
+                                </p>
+                                <a href="store.html" class="btn btn-outline-warning mt-3" style="border-radius: 30px; padding: 0.75rem 2rem;">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="store" class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-5">
+                                <span class="section-heading-upper">Come On In</span>
+                                <span class="section-heading-lower">We're Open</span>
+                            </h2>
+                            <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    Sunday
+                                    <span class="ms-auto">Closed</span>
+                                </li>
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    Monday
+                                    <span class="ms-auto">8:00 AM to 4:00 PM</span>
+                                </li>
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    Tuesday
+                                    <span class="ms-auto">8:00 AM to 4:00 PM</span>
+                                </li>
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    Wednesday
+                                    <span class="ms-auto">8:00 AM to 4:00 PM</span>
+                                </li>
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    Thursday
+                                    <span class="ms-auto">8:00 AM to 4:00 PM</span>
+                                </li>
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    Friday
+                                    <span class="ms-auto">8:00 AM to 4:00 PM</span>
+                                </li>
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    Saturday
+                                    <span class="ms-auto">8:00 AM to 4:00 PM</span>
+                                </li>
+                            </ul>
+                            <p class="address mb-5">
+                                <em>
+                                    <strong>Solusi Tech</strong>
+                                    <br />
+                                    Jl. Villa Bukit Tidar, Blok A4 No.139-140, Merjosari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65144
+                                </em>
+                            </p>
+                            <p class="mb-0">
+                                <small><em>Hubungi via WhatsApp</em></small>
+                                <br />
+                                <a href="https://wa.me/6281282000025" target="_blank" class="wa-link">
+                                    <i class="fab fa-whatsapp"></i>
+                                    0812-8200-0025
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2025</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
